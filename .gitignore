@@ -6,9 +6,13 @@
 /static/img_out
 /__pycache__
 /.idea
+/runs
 
 #files
 *.csv
 *.xls
 *xlsx
 *.jpg
+*.pt
+*.pth
+*.ckpt
