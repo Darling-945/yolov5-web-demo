@@ -1,5 +1,6 @@
 # yolo_web
 把yolov5模型部署到web端，简单的应用  
+yolo版本是yolov5 6.0，请不要随便替换里面的yolov5源代码，只替换你的模型即可
 ### 环境配置
 ```
 pip intsall -r requirements.txt
