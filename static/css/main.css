@@ -35,109 +35,7 @@ body {
     transition: background 0.3s ease, color 0.3s ease;
 }
 
-/* 深色模式样式 */
-body.dark-mode {
-    background: var(--dark-gradient);
-    color: var(--dark-text-primary);
-}
 
-body.dark-mode .navbar {
-    background: rgba(15, 15, 35, 0.95) !important;
-    border-bottom: 1px solid var(--dark-border-color);
-}
-
-body.dark-mode .main-container {
-    background: var(--dark-bg-card);
-    border: 1px solid var(--dark-border-color);
-    color: var(--dark-text-primary);
-}
-
-body.dark-mode .card {
-    background: var(--dark-bg-card);
-    border: 1px solid var(--dark-border-color);
-    color: var(--dark-text-primary);
-}
-
-body.dark-mode .upload-area {
-    background: rgba(26, 26, 46, 0.6);
-    border-color: var(--dark-border-color);
-    color: var(--dark-text-primary);
-}
-
-body.dark-mode .upload-area:hover {
-    background: rgba(26, 26, 46, 0.8);
-    border-color: var(--primary-color);
-}
-
-body.dark-mode .form-control,
-body.dark-mode .form-select {
-    background: rgba(26, 26, 46, 0.8);
-    border-color: var(--dark-border-color);
-    color: var(--dark-text-primary);
-}
-
-body.dark-mode .form-control:focus,
-body.dark-mode .form-select:focus {
-    background: rgba(26, 26, 46, 0.9);
-    border-color: var(--primary-color);
-    color: var(--dark-text-primary);
-}
-
-body.dark-mode .text-muted {
-    color: var(--dark-text-secondary) !important;
-}
-
-body.dark-mode .modal-content {
-    background: var(--dark-bg-card);
-    border: 1px solid var(--dark-border-color);
-    color: var(--dark-text-primary);
-}
-
-body.dark-mode .modal-header {
-    border-bottom: 1px solid var(--dark-border-color);
-}
-
-body.dark-mode .modal-footer {
-    border-top: 1px solid var(--dark-border-color);
-}
-
-body.dark-mode .bg-light {
-    background: rgba(26, 26, 46, 0.6) !important;
-}
-
-body.dark-mode .table {
-    color: var(--dark-text-primary);
-}
-
-body.dark-mode .table-hover tbody tr:hover {
-    background: rgba(102, 126, 234, 0.1);
-}
-
-/* 主题切换按钮样式 */
-.theme-toggle {
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    background: var(--bg-gradient);
-    border: none;
-    box-shadow: var(--card-shadow);
-    cursor: pointer;
-    transition: all 0.3s ease;
-    z-index: 1000;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    font-size: 1.5rem;
-}
-
-.theme-toggle:hover {
-    transform: scale(1.1);
-    box-shadow: var(--hover-shadow);
-}
 
 /* Toast 通知样式 */
 .toast-container {
@@ -162,10 +60,6 @@ body.dark-mode .table-hover tbody tr:hover {
     border-left: 4px solid var(--primary-color);
 }
 
-body.dark-mode .custom-toast {
-    background: var(--dark-bg-card);
-    color: var(--dark-text-primary);
-}
 
 .custom-toast.success {
     border-left-color: var(--success-color);
@@ -205,27 +99,6 @@ body.dark-mode .custom-toast {
     }
 }
 
-/* 骨架屏加载效果 */
-.skeleton {
-    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
-    background-size: 200% 100%;
-    animation: loading 1.5s infinite;
-    border-radius: 8px;
-}
-
-body.dark-mode .skeleton {
-    background: linear-gradient(90deg, rgba(255,255,255,0.1) 25%, rgba(255,255,255,0.2) 50%, rgba(255,255,255,0.1) 75%);
-    background-size: 200% 100%;
-}
-
-@keyframes loading {
-    0% {
-        background-position: 200% 0;
-    }
-    100% {
-        background-position: -200% 0;
-    }
-}
 
 /* 现代化进度条 */
 .modern-progress {
@@ -315,22 +188,6 @@ body.dark-mode .skeleton {
     opacity: 1;
 }
 
-/* 快捷键样式 */
-kbd {
-    background: rgba(255, 255, 255, 0.9);
-    border: 1px solid rgba(0, 0, 0, 0.2);
-    border-radius: 4px;
-    padding: 2px 6px;
-    font-family: monospace;
-    font-size: 0.8em;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-body.dark-mode kbd {
-    background: rgba(255, 255, 255, 0.1);
-    border-color: rgba(255, 255, 255, 0.2);
-    color: var(--dark-text-primary);
-}
 
 /* 文件选择按钮样式 */
 #selectFileBtn {
@@ -355,17 +212,6 @@ body.dark-mode kbd {
     box-shadow: 0 4px 15px rgba(102, 126, 234, 0.2);
 }
 
-body.dark-mode #selectFileBtn {
-    background: rgba(26, 26, 46, 0.8);
-    border-color: rgba(102, 126, 234, 0.4);
-    color: var(--dark-text-primary);
-}
-
-body.dark-mode #selectFileBtn:hover {
-    background: var(--bg-gradient);
-    border-color: var(--primary-color);
-    color: white;
-}
 
 /* 进度环样式 */
 .progress-ring {
@@ -618,6 +464,37 @@ body.dark-mode #selectFileBtn:hover {
     padding: 8px 16px;
 }
 
+/* 通用div居中样式 */
+div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* 恢复需要特殊布局的div */
+div.row {
+    flex-direction: row;
+}
+
+div.navbar,
+div.navbar-nav,
+div.card,
+div.btn-group,
+div.modal-content,
+div.upload-area {
+    align-items: initial;
+    justify-content: initial;
+}
+
+/* 保持Bootstrap网格系统的正常工作 */
+div[class*="col-"],
+div[class*="container"],
+div[class*="collapse"] {
+    align-items: initial;
+    justify-content: initial;
+}
+
 /* 进度条样式 */
 .progress {
     border-radius: 12px;
@@ -654,14 +531,7 @@ body.dark-mode #selectFileBtn:hover {
         font-size: 1.3rem;
     }
 
-    .theme-toggle {
-        width: 50px;
-        height: 50px;
-        bottom: 20px;
-        right: 20px;
-        font-size: 1.3rem;
-    }
-
+    
     .custom-toast {
         min-width: 250px;
         font-size: 0.9rem;
@@ -689,14 +559,7 @@ body.dark-mode #selectFileBtn:hover {
         font-size: 1.6rem;
     }
 
-    .theme-toggle {
-        width: 45px;
-        height: 45px;
-        bottom: 15px;
-        right: 15px;
-        font-size: 1.2rem;
-    }
-
+    
     .navbar-brand {
         font-size: 1.1rem;
     }
@@ -750,14 +613,7 @@ body.dark-mode #selectFileBtn:hover {
         font-size: 1.4rem;
     }
 
-    .theme-toggle {
-        width: 40px;
-        height: 40px;
-        bottom: 10px;
-        right: 10px;
-        font-size: 1rem;
-    }
-
+    
     .upload-area h4 {
         font-size: 1rem;
         margin-bottom: 0.5rem;
